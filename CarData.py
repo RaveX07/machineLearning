@@ -18,10 +18,10 @@ clas = le.fit_transform(list(data["class"]))
 
 predict = "class"
 
-x = list(zip(buying, lug_boot, safety, door, maint, persons))
+x = list(zip(buying, lug_boot, safety, maint, persons))
 y = list(clas)
 
-# x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.1)
+#x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.1)
 
 
 best = 0.000000000
@@ -40,8 +40,8 @@ for _ in range(4999):
             pickle.dump(linear, pkl)
 
 print("The best was ", best)
-
 """
+
 pickle_in = open("carmodel.pickle", "rb")
 linear = pickle.load(pickle_in)
 
